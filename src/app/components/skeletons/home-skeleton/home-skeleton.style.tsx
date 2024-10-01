@@ -1,4 +1,4 @@
-import { SHIMMER_ANIMATION } from "~/basics/constants/example.constant";
+import { SHIMMER_ANIMATION } from "~/app/basics/constants/example.constant";
 
 export const useHomeSkeletonStyle = () => {
   const container = [
@@ -29,9 +29,9 @@ export const useHomeSkeletonStyle = () => {
     "bg-gray-100",
   ].join(" ");
 
-  const title = "bg-gray-200 rounded-md w-full h-5";
-  const description = "bg-gray-200 rounded-md w-full h-36";
-  const price = "bg-gray-200 rounded-md w-16 h-7";
+  const title = "bg-gray-200 rounded-md w-full h-7";
+  const description = "bg-gray-200 rounded-md w-full h-28";
+  const price = "bg-gray-200 rounded-md w-28 h-8 self-end";
 
   return { container, card, title, description, price };
 };

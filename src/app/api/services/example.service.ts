@@ -1,4 +1,4 @@
-import { api } from "~/api";
+import { api } from "~/app/api";
 
 export const ExampleService = {
   getExample: async () => {

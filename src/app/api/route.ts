@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { ExampleService } from "~/api/services/example.service";
+import { ExampleService } from "~/app/api/services/example.service";
 
 import type { NextRequest } from "next/server";
 
