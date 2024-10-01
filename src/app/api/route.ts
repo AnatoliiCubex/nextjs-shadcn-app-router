@@ -7,6 +7,9 @@ import type { NextRequest } from "next/server";
 export async function GET(request: NextRequest) {
   try {
     const products = await ExampleService.getExample();
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     return NextResponse.json(products, { status: 200 });
   } catch (error) {
     if (error instanceof Error) {

@@ -4,14 +4,38 @@ export default async function HomeView() {
   const { data } = await useHomeViewLogic();
 
   return (
-    <div className='justify-items-center items-center gap-16 grid grid-rows-[20px_1fr_20px] p-8 sm:p-20 pb-20 min-h-screen font-[family-name:var(--font-geist-sans)]'>
+    <div
+      className={[
+        "gap-4",
+        "grid",
+        "grid-cols-1",
+        "sm:grid-cols-2",
+        "md:grid-cols-3",
+        "lg:grid-cols-4",
+        "p-8",
+        "sm:p-10",
+        "pb-20",
+        "min-h-screen",
+      ].join(" ")}
+    >
       {data.products.map((product) => (
-        <div key={product.id} className='flex flex-col items-center gap-4'>
-          <div className='text-center'>
-            <h2 className='font-bold text-xl'>{product.title}</h2>
-            <p className='text-gray-500'>{product.description}</p>
-            <p className='text-gray-500'>${product.price}</p>
-          </div>
+        <div
+          key={product.id}
+          className={[
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-4",
+            "border-gray-300",
+            "p-4",
+            "border",
+            "rounded-md",
+            "text-center",
+          ].join(" ")}
+        >
+          <h2 className='font-bold text-xl'>{product.title}</h2>
+          <p className='text-gray-500'>{product.description}</p>
+          <p className='mt-auto font-bold text-green-600'>${product.price}</p>
         </div>
       ))}
     </div>
