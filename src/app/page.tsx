@@ -1,12 +1,13 @@
-import { Suspense } from "react";
+import Link from "next/link";
 
-import HomeSkeleton from "~/app/components/skeletons/home-skeleton/home-skeleton";
-import HomeView from "~/app/views/home-view/home-view";
+import { Button } from "~/app/components/ui/button";
 
-export default async function Home() {
+export default async function Page() {
   return (
-    <Suspense fallback={<HomeSkeleton />}>
-      <HomeView />
-    </Suspense>
+    <div className={"w-screen h-screen flex justify-center items-center"}>
+      <Link href={"/example"}>
+        <Button>Go to example page</Button>
+      </Link>
+    </div>
   );
 }

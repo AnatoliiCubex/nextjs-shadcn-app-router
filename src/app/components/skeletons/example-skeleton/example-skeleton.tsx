@@ -1,9 +1,9 @@
 import React from "react";
 
-import { useHomeSkeletonStyle } from "~/app/components/skeletons/home-skeleton/home-skeleton.style";
+import { useExampleSkeletonStyle } from "~/app/components/skeletons/example-skeleton/example-skeleton.style";
 
 const HomeSkeleton = () => {
-  const styles = useHomeSkeletonStyle();
+  const styles = useExampleSkeletonStyle();
 
   return (
     <div className={styles.container}>
