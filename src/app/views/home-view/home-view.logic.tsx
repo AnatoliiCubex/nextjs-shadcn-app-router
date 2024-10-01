@@ -1,8 +1,9 @@
 import { nextApiRoute } from "~/api";
 
+import type { ExampleType } from "~/basics/types/example.type";
+
 export const useHomeViewLogic = async () => {
-  const response = await nextApiRoute.get("/");
-  const products = response.data.products;
+  const products = (await nextApiRoute.get<ExampleType[]>("")).data;
 
   return { data: { products }, state: {}, setState: {}, handlers: {} };
 };

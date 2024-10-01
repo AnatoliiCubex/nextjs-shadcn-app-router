@@ -7,11 +7,10 @@ import type { NextRequest } from "next/server";
 export async function GET(request: NextRequest) {
   try {
     const products = await ExampleService.getExample();
-    return NextResponse.json({ products }, { status: 200 });
+    return NextResponse.json(products, { status: 200 });
   } catch (error) {
-    return NextResponse.json(
-      { error: "Internal Server Error" },
-      { status: 500 }
-    );
+    if (error instanceof Error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
   }
 }
