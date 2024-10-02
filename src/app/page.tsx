@@ -4,7 +4,7 @@ import { Button } from "~/app/components/ui/button";
 
 export default async function Page() {
   return (
-    <div className={"w-screen h-screen flex justify-center items-center"}>
+    <div className='flex justify-center items-center h-screen'>
       <Link href={"/example"}>
         <Button>Go to example page</Button>
       </Link>

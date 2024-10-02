@@ -1,4 +1,4 @@
-export const useHomeViewStyle = () => {
+export const useExampleViewStyle = () => {
   const container = [
     "gap-4",
     "grid",

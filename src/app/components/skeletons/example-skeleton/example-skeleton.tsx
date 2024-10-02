@@ -2,7 +2,7 @@ import React from "react";
 
 import { useExampleSkeletonStyle } from "~/app/components/skeletons/example-skeleton/example-skeleton.style";
 
-const HomeSkeleton = () => {
+const ExampleSkeleton = () => {
   const styles = useExampleSkeletonStyle();
 
   return (
@@ -18,4 +18,4 @@ const HomeSkeleton = () => {
   );
 };
 
-export default HomeSkeleton;
+export default ExampleSkeleton;
